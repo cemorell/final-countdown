@@ -63,19 +63,36 @@
     <script>
     $(document).ready(function(){
 
-
+var clicker = 0;
+ $('.counter').click(function(){
+  clicker = (clicker++);
+  console.log(clicker);
+ });
 
     $('#counter').click(function(e) {
+        if ((clicker%2)==1){
           e.preventDefault();
           var counterValue = parseInt($('#counter').val());
           setInterval(function() {
             var countdown = counterValue--
             console.log(countdown);
             $('#counter').val(countdown);
-    }, 1000);
-    });
-  })
+            }, 1000);
+        }
+        else if (clicker%2===0) {
+          e.preventDefault();
+          // setInterval(function() {
+            var countdown = counterValue
+            console.log ("stop");
+          // });
+        }
 
+
+    });
+
+
+
+  })
 
 
     </script>
@@ -89,3 +106,12 @@
 
   </body>
 </html>
+
+
+if
+
+
+
+
+
+\\\\\\\\\\\\fsdfsdfsdfjfkdshjsdfhhkjsdjhfjhdjjdjdjjdjdjdjjdjdjjdjdjjdjjdjdj
